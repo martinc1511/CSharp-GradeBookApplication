@@ -19,7 +19,9 @@ namespace GradeBook.GradeBooks
         public BaseGradeBook(string name, bool isWeighted)
         {
             Name = name;
+            IsWeighted = isWeighted;
             Students = new List<Student>();
+           
         }
 
         public void AddStudent(Student student)
@@ -76,7 +78,7 @@ namespace GradeBook.GradeBooks
             }
         }
 
-        public static BaseGradeBook Load(string name, bool isWeighted)
+        public static BaseGradeBook Load(string name)
         {
             if (!File.Exists(name + ".gdbk"))
             {
