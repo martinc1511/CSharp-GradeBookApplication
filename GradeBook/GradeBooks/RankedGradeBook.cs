@@ -24,7 +24,7 @@ namespace GradeBook.GradeBooks
 
             //return base.GetLetterGrade(averageGrade);
 
-            if (averageGrade >= grades[threshold - 1])
+            if (grades[threshold - 1] <=averageGrade)
                 return 'A';
             if (averageGrade >= grades[(threshold * 2) - 1])
                 return 'B';
